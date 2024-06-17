@@ -29,6 +29,8 @@ ul {
 /*  Set the font */
 body {
   font-family: "Helvetica", sans-serif;
+  line-height: 1.5;
+  font-size: 1.2em;
 }
 
 /* STYLES */
@@ -84,6 +86,7 @@ ol {
   flex-direction: column;
   gap: 0.5em;
   padding: 0 2.5vw;
+  list-style-type: none;
 }
 
 ul {
@@ -94,7 +97,16 @@ ul {
   align-self: center;
 }
 
-ul li::before {
+ul > li::before {
   content: "-";
+  margin-right: 0.5em;
+}
+
+ol > li {
+  counter-increment: listcounter;
+}
+
+ol > li::before {
+  content: counter(listcounter) ")";
   margin-right: 0.5em;
 }
