@@ -5,11 +5,22 @@ html {
   font-size: 16px;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: lighter;
@@ -22,3 +33,68 @@ body {
 
 /* STYLES */
 /* Write your CSS below */
+
+.container {
+  padding: 5vw 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2em;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 1em;
+  width: 100%;
+}
+
+.hero-image {
+  height: 500px;
+  color: white;
+  font-size: 2em;
+  background-size: cover;
+  background-image: url(../images/apple-pie.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  opacity: 75%;
+  font-weight: bold;
+}
+
+.info-img {
+  max-width: 400px;
+  background-size: cover;
+  align-self: center;
+}
+
+hr {
+  color: black;
+  width: 100%;
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 0 2.5vw;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  list-style-type: none;
+  align-self: center;
+}
+
+ul li::before {
+  content: "-";
+  margin-right: 0.5em;
+}
